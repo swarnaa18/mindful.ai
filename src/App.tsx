@@ -31,9 +31,12 @@ export default function ResearchWebsite() {
   const teamMembers = [
     {
       name: "Dr. Alvin Joseph",
-      role: "Senior Resident MD Psychiatry",
+      role: "Principal Investigator ",
       location: "Bangalore, India",
-      affiliation: "St. John's Medical College Hospital",
+      affiliation: {
+        hospital: "St. John's Medical College Hospital",
+        designation: "Senior Resident MD Psychiatry",
+      },
       details:
         "PRIIIA Research fellow - Psychiatry Research Infrastructure In India. Research Area: Addiction and mental health.",
       icon: "🩺",
@@ -153,27 +156,54 @@ export default function ResearchWebsite() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Top Bar with Logo */}
+      {/* Top Bar with Logo + Navigation */}
       <div className="bg-white border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            {/* CHANGE 2: Replaced Brain Icon div with Image tag */}
+        <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+          {/* LEFT: Brand (BIGGER) */}
+          <div className="flex items-center gap-4">
             <img
               src={logoPng}
               alt="Mindful AI Logo"
-              className="h-10 w-auto object-contain"
+              className="h-16 w-auto object-contain"
             />
-            <span className="text-lg font-semibold text-gray-900">
-              MINDFUL AI
-            </span>
+            <div>
+              <div className="text-2xl font-bold text-gray-900">MINDFUL AI</div>
+              <div className="text-sm text-gray-500">
+                Youth Research Initiative
+              </div>
+            </div>
           </div>
-          <div className="text-sm text-gray-500">Research Initiative</div>
+
+          {/* RIGHT: Navigation */}
+          <div className="flex space-x-8">
+            {[
+              { id: "about", label: "Overview" },
+              { id: "research", label: "Research" },
+              { id: "outcomes", label: "Outcomes" },
+              { id: "team", label: "Team" },
+            ].map((section) => (
+              <button
+                key={section.id}
+                onClick={() => setActiveSection(section.id)}
+                className={`relative text-sm font-medium transition-all ${
+                  activeSection === section.id
+                    ? "text-gray-900"
+                    : "text-gray-500 hover:text-gray-900"
+                }`}
+              >
+                {section.label}
+                {activeSection === section.id && (
+                  <div className="absolute -bottom-2 left-0 right-0 h-0.5 bg-orange-500"></div>
+                )}
+              </button>
+            ))}
+          </div>
         </div>
       </div>
 
       {/* Hero Header - Ultra minimal and premium */}
       <header className="relative bg-white border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-6 py-20">
+        <div className="max-w-7xl mx-auto px-6 py-16">
           <div
             className={`transition-all duration-1000 ${
               isVisible
@@ -182,7 +212,7 @@ export default function ResearchWebsite() {
             }`}
           >
             {/* Main heading */}
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight mb-6 tracking-tight max-w-4xl">
+            <h1 className="text-3xl md:text-4xl font-semibold text-gray-900 leading-snug mb-4 max-w-4xl">
               Culturally Grounded AI Safety Research
             </h1>
 
@@ -234,7 +264,7 @@ export default function ResearchWebsite() {
       </header>
 
       {/* Navigation - Ultra minimal */}
-      <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
+      {/* <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex space-x-8">
             {[
@@ -262,7 +292,7 @@ export default function ResearchWebsite() {
             })}
           </div>
         </div>
-      </nav>
+      </nav> */}
 
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-6 py-16">
@@ -660,15 +690,19 @@ export default function ResearchWebsite() {
                         <p className="text-orange-600 font-medium mt-1">
                           {member.role}
                         </p>
-                        <p className="text-gray-500 text-sm mt-1 flex items-center gap-1">
+                        <p className="text-gray-500 text-sm mt-1 mb-2 flex items-center gap-1">
                           <Globe className="w-3 h-3" />
                           {member.location}
                         </p>
+
                         {member.affiliation && (
-                          <p className="text-gray-600 text-sm mt-2 italic">
-                            {member.affiliation}
+                          <p className="text-sm text-gray-600 italic">
+                            {member.affiliation.hospital}
+                            <br />
+                            {member.affiliation.designation}
                           </p>
                         )}
+
                         <p className="text-gray-700 text-sm mt-3 leading-relaxed">
                           {member.details}
                         </p>
