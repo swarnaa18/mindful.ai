@@ -164,11 +164,13 @@ export default function ResearchWebsite() {
             <img
               src={logoPng}
               alt="Mindful AI Logo"
-              className="h-16 w-auto object-contain"
+              className="h-20 md:h-24 w-auto object-contain"
             />
             <div>
-              <div className="text-2xl font-bold text-gray-900">MINDFUL AI</div>
-              <div className="text-sm text-gray-500">
+              <div className="text-3xl md:text-4xl font-extrabold tracking-tight text-gray-900">
+                MINDFUL AI
+              </div>
+              <div className="text-base text-gray-600 mt-1">
                 Youth Research Initiative
               </div>
             </div>
