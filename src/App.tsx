@@ -51,6 +51,7 @@ export default function ResearchWebsite() {
         "Healthcare Strategy & Innovation, Digital Health Platforms, Strategic Governance, Global Operations Leadership.",
       icon: "🌐",
     },
+
     {
       name: "Suresh Joseph",
       role: "Consultant - Market Research Specialist",
@@ -710,6 +711,14 @@ export default function ResearchWebsite() {
                         <p className="text-gray-700 text-sm mt-3 leading-relaxed">
                           {member.details}
                         </p>
+                        {member.coreExpertise && (
+                          <p className="text-gray-700 text-sm mt-2 leading-relaxed">
+                            <span className="font-semibold">
+                              Core Expertise:
+                            </span>{" "}
+                            {member.coreExpertise}
+                          </p>
+                        )}
                       </div>
                     </div>
                   </div>
