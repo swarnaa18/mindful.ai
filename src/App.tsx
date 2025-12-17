@@ -109,8 +109,8 @@ export default function ResearchWebsite() {
       icon: "💡",
     },
     {
-      name: "Shakshitha Shailendar",
-      role: "Behavioural Psychologist",
+      name: "Shakshitha S",
+      role: "HR Psychology Consultant",
       location: "India",
       details:
         "Shakshitha holds a Masters degree in Human Resource Development Management (HRDM) with a strong academic foundation in Psychology. Her work focuses on understanding human behaviour through research and the ethical application of behavioural science across organisational and social contexts. She previously worked as a Research Associate at the Indian Institute of Management Bangalore where her research centred on Gen Z behaviour, attitudes and decision-making. This experience strengthened her expertise in empirical research, behavioural analysis and translating academic insights into practical, scalable frameworks. Currently, Shakshitha is an HR Specialist at Swish, a fast-growing startup in Bangalore, where she has been involved in building people systems and HR practices from the ground up.",
