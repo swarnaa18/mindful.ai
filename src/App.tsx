@@ -109,7 +109,7 @@ export default function ResearchWebsite() {
       icon: "💡",
     },
     {
-      name: "Shakshitha S",
+      name: "Shakshitha S.",
       role: "HR Psychology Consultant",
       location: "India",
       details:
