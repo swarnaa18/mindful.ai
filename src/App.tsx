@@ -32,7 +32,7 @@ export default function ResearchWebsite() {
     {
       name: "Dr. Alvin Joseph",
       role: "Senior Resident MD Psychiatry",
-      location: "Bangalore, India",
+      location: "India",
       affiliation: "St. John's Medical College Hospital",
       details:
         "PRIIIA Research fellow - Psychiatry Research Infrastructure In India. Research Area: Addiction and mental health.",
@@ -43,9 +43,12 @@ export default function ResearchWebsite() {
       role: "Project Lead",
       location: "Bangalore | Dallas | Abu Dhabi | Kuala Lumpur",
       details:
-        "Board-level executive with over 25 years of multi-sector experience in healthcare innovation, digital ecosystems, and global partnerships. Core Expertise: Healthcare Strategy & Innovation, Digital Health Platforms, Strategic Governance, Global Operations Leadership.",
+        "Board-level executive with over 25 years of multi-sector experience in healthcare innovation, digital ecosystems, and global partnerships.",
+      coreExpertise:
+        "Healthcare Strategy & Innovation, Digital Health Platforms, Strategic Governance, Global Operations Leadership.",
       icon: "🌐",
     },
+
     {
       name: "Suresh Joseph",
       role: "Consultant - Market Research Specialist",
@@ -57,7 +60,7 @@ export default function ResearchWebsite() {
     {
       name: "Dr. Mark Seglin, PhD",
       role: "Lead Psychologist",
-      location: "",
+      location: "Jersey City, NJ",
       details:
         "Dr.Seglin is a licensed psychologist with a strong focus on mental health care for children and adolescents. His clinical work emphasizes careful assessment, developmentally informed treatment, and evidence-based interventions tailored to the needs of young people and their families. He brings a research-focused approach to practice, integrating psychological theory and clinical data to guide treatment planning and outcomes.",
       icon: "🩺",
@@ -65,7 +68,7 @@ export default function ResearchWebsite() {
     {
       name: "Perpetua John Selvadoray",
       role: "Research Head",
-      location: "Chennai, India",
+      location: "India",
       details:
         "Head of Administration at ICSE School. Certified in ICSE board Mental Health wellness for children and adolescents. 25 years of experience working with children and adolescents in the US and India.",
       icon: "🎓",
@@ -105,7 +108,7 @@ export default function ResearchWebsite() {
     {
       name: "Shakshitha Shailendar",
       role: "Behavioural Psychologist",
-      location: "Bangalore, India",
+      location: "India",
       details:
         "Shakshitha holds a Masters degree in Human Resource Development Management (HRDM) with a strong academic foundation in Psychology. Her work focuses on understanding human behaviour through research and the ethical application of behavioural science across organisational and social contexts. She previously worked as a Research Associate at the Indian Institute of Management Bangalore where her research centred on Gen Z behaviour, attitudes and decision-making. This experience strengthened her expertise in empirical research, behavioural analysis and translating academic insights into practical, scalable frameworks. Currently, Shakshitha is an HR Specialist at Swish, a fast-growing startup in Bangalore, where she has been involved in building people systems and HR practices from the ground up.",
       icon: "🩺",
@@ -113,7 +116,7 @@ export default function ResearchWebsite() {
     {
       name: "Anamitra Acharya",
       role: "Management Services and Administration",
-      location: "Bangalore, India",
+      location: "India",
       details:
         "30+ years of diverse experience across education, technology, security services, infrastructure management, and healthcare administration. Expertise in organizational leadership, project execution, and legal compliance.",
       icon: "⚙️",
@@ -167,7 +170,7 @@ export default function ResearchWebsite() {
               MINDFUL AI
             </span>
           </div>
-          <div className="text-sm text-gray-500">Research Initiative</div>
+          <div className="text-sm text-gray-500">Youth Research Initiative</div>
         </div>
       </div>
 
@@ -672,6 +675,14 @@ export default function ResearchWebsite() {
                         <p className="text-gray-700 text-sm mt-3 leading-relaxed">
                           {member.details}
                         </p>
+                        {member.coreExpertise && (
+                          <p className="text-gray-700 text-sm mt-2 leading-relaxed">
+                            <span className="font-semibold">
+                              Core Expertise:
+                            </span>{" "}
+                            {member.coreExpertise}
+                          </p>
+                        )}
                       </div>
                     </div>
                   </div>
