@@ -54,7 +54,7 @@ export default function ResearchWebsite() {
 
     {
       name: "Suresh Joseph",
-      role: "Consultant - Market Research Specialist",
+      role: "Chief Consultant - Market Research",
       location: "Dallas, TX",
       details:
         "Market Intelligence & Analytics Specialist with 30+ years experience at Fortune 500 companies. Expertise in market research, opportunity assessment, and business planning.",
