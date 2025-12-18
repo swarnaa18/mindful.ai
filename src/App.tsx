@@ -14,6 +14,7 @@ import {
   Sparkles,
   Zap,
   Heart,
+  UserCog,
 } from "lucide-react";
 
 // CHANGE 1: Import the logo image
@@ -114,7 +115,7 @@ export default function ResearchWebsite() {
       location: "India",
       details:
         "Shakshitha holds a Masters degree in Human Resource Development Management (HRDM) with a strong academic foundation in Psychology. Her work focuses on understanding human behaviour through research and the ethical application of behavioural science across organisational and social contexts. She previously worked as a Research Associate at the Indian Institute of Management Bangalore where her research centred on Gen Z behaviour, attitudes and decision-making. This experience strengthened her expertise in empirical research, behavioural analysis and translating academic insights into practical, scalable frameworks. Currently, Shakshitha is an HR Specialist at Swish, a fast-growing startup in Bangalore, where she has been involved in building people systems and HR practices from the ground up.",
-      icon: "🩺",
+      icon: UserCog,
     },
     {
       name: "Anamitra Acharya",
@@ -687,7 +688,19 @@ export default function ResearchWebsite() {
                     className="bg-white rounded-lg p-8 border border-gray-200 hover:border-orange-200 transition-all"
                   >
                     <div className="flex items-start gap-5">
-                      <div className="text-4xl">{member.icon}</div>
+                      {/* <div className="text-4xl">{member.icon}</div> */}
+                      
+                      
+                      <div className="text-4xl text-indigo-600">
+  {typeof member.icon === "string" ? (
+    member.icon
+  ) : (
+    <member.icon className="w-8 h-8" />
+  )}
+</div>
+
+
+
                       <div className="flex-1">
                         <h3 className="text-xl font-bold text-gray-900">
                           {member.name}
