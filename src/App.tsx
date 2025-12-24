@@ -19,7 +19,7 @@ import {
 
 // CHANGE 1: Import the logo image
 // Ensure you have a file named 'logo.png' in the same folder, or update this path
-import logoPng from "./logo.png";
+import logoPng from "./xmas_logo_bgremoved.png";
 
 export default function ResearchWebsite() {
   const [activeSection, setActiveSection] = useState("about");
@@ -689,17 +689,14 @@ export default function ResearchWebsite() {
                   >
                     <div className="flex items-start gap-5">
                       {/* <div className="text-4xl">{member.icon}</div> */}
-                      
-                      
+
                       <div className="text-4xl text-indigo-600">
-  {typeof member.icon === "string" ? (
-    member.icon
-  ) : (
-    <member.icon className="w-8 h-8" />
-  )}
-</div>
-
-
+                        {typeof member.icon === "string" ? (
+                          member.icon
+                        ) : (
+                          <member.icon className="w-8 h-8" />
+                        )}
+                      </div>
 
                       <div className="flex-1">
                         <h3 className="text-xl font-bold text-gray-900">
